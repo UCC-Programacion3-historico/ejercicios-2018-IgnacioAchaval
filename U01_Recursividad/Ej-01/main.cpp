@@ -1,7 +1,10 @@
 #include <iostream>
 #include "potencia.h"
 
+using namespace std;
+
 int main() {
-    std::cout << potencia(5, 0) << std::endl;
+    cout <<"el resultado es: ";
+    cout <<  potencia(5, 2) << endl;
     return 0;
 }

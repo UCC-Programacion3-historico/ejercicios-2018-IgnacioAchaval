@@ -4,12 +4,12 @@
 using namespace std;
 
 unsigned int cociente(unsigned int a, unsigned int b) {
-    return 0;
+    return a / b;
 }
 
 
 unsigned int resto(unsigned int a, unsigned int b) {
-    return 0;
+    return a % b;
 }
 
 

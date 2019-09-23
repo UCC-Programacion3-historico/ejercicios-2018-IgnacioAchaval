@@ -30,7 +30,7 @@ T Calculadora<T>::multiplicar(T a, T b) {
 
 template<class T>
 T Calculadora<T>::dividir(T a, T b) {
-    if(b == 0)
+    if (b == 0)
         throw 404;
 
     return a / b;

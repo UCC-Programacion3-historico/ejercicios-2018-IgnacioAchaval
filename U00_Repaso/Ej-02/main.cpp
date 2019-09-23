@@ -11,7 +11,7 @@ int main() {
     pp.push_back(3);
 
 
-    cout << miCalc.divi(10, 3);
+    cout << miCalc.dividir(10, 3);
     cout << "Ejercicio 00/02\n" << endl;
     return 0;
 }
