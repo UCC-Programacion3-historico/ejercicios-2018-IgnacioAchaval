@@ -12,9 +12,7 @@ int main(){
     l.insertarPrimero(3);
     l.insertarPrimero(2);
     l.insertarPrimero(1);
-
-    cout << "Hola mindo"<< l.getTamanio() << endl;
-
+    l.print();
 
     return 0;
 }

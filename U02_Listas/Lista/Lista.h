@@ -1,7 +1,10 @@
 #ifndef LISTA_H
 #define LISTA_H
 
+#include <iostream>
 #include "nodo.h"
+
+using namespace std;
 
 /**
  * Clase que implementa una Lista Enlasada generica, ya que puede
@@ -39,7 +42,13 @@ public:
 
     void vaciar();
 
+    void print();
+
+    void fnInvierte ();
+
     void moverUlti(int pos);
+
+    void removerporValor(T dato);
 };
 
 
@@ -320,6 +329,45 @@ void Lista<T>::moverUlti(int pos) {
 
 
 }
+template <class T>
+void Lista<T>::print()
+{
+    Nodo<T> *aux = inicio;
 
+    while (aux != NULL){
+        cout << aux->getDato();
+        aux = aux->getSiguiente();
+    }
+    cout << endl;
+}
+
+template <class T>
+void Lista<T>::fnInvierte () {
+    if (inicio == NULL)
+        return;
+
+    Nodo<T> *ant = NULL, *act = NULL, *tmp = NULL;
+    act = inicio;
+    while (act != NULL) {
+        tmp = act->getSiguiente();
+        act->setSiguiente(ant);
+        ant = act;
+        act = tmp;
+    }
+    inicio = ant;
+}
+
+template <class T>
+void Lista<T>::removerporValor(T dato){
+    Nodo<T> *aux = inicio, *aBorrar;
+    int posActual = 0;
+    while (aux != nullptr && aux->getDato()!=dato) {
+        aux = aux->getSiguiente();
+        posActual++;
+    }
+    if (aux == nullptr)
+        throw 404;
+    else remover(posActual);
+}
 
 #endif //LISTA_H

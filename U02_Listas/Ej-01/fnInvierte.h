@@ -2,13 +2,15 @@
 #ifndef FNINVIERTE_H
 #define FNINVIERTE_H
 
-
-template <class T>
-void fnInvierte (Lista<T> *lis);
+//Esta funcion la implemente en la clase lista
 
 
 template <class T>
-void fnInvierte (Lista<T> *lis){
+void fnInviertee (Lista<T> *lis);
+
+
+template <class T>
+void fnInviertee (Lista<T> *lis) {
 
 }
 
